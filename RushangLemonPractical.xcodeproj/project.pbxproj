@@ -14,9 +14,12 @@
 		C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B049250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld */; };
 		C3B2B04D250FEEC70030F563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B04C250FEEC70030F563 /* Assets.xcassets */; };
 		C3B2B050250FEEC70030F563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B04E250FEEC70030F563 /* LaunchScreen.storyboard */; };
+		FB539E0AC6E983997886A5E6 /* Pods_RushangLemonPractical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CA769CE98A951F22ED6903D /* Pods-RushangLemonPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.debug.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.debug.xcconfig"; sourceTree = "<group>"; };
+		46B86F8BD201365B12210E8B /* Pods-RushangLemonPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.release.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.release.xcconfig"; sourceTree = "<group>"; };
 		C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushangLemonPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B2B040250FEEC40030F563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B2B042250FEEC40030F563 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C3B2B04C250FEEC70030F563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3B2B04F250FEEC70030F563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3B2B051250FEEC70030F563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RushangLemonPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB539E0AC6E983997886A5E6 /* Pods_RushangLemonPractical.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2010A84D7DF3B3733CF5C581 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7E0E4C73FF4AF34D6DB0DEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CA769CE98A951F22ED6903D /* Pods-RushangLemonPractical.debug.xcconfig */,
+				46B86F8BD201365B12210E8B /* Pods-RushangLemonPractical.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C3B2B034250FEEC40030F563 = {
 			isa = PBXGroup;
 			children = (
 				C3B2B03F250FEEC40030F563 /* RushangLemonPractical */,
 				C3B2B03E250FEEC40030F563 /* Products */,
+				A7E0E4C73FF4AF34D6DB0DEC /* Pods */,
+				2010A84D7DF3B3733CF5C581 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3B2B054250FEEC70030F563 /* Build configuration list for PBXNativeTarget "RushangLemonPractical" */;
 			buildPhases = (
+				C2B99E0653C04406877D1777 /* [CP] Check Pods Manifest.lock */,
 				C3B2B039250FEEC40030F563 /* Sources */,
 				C3B2B03A250FEEC40030F563 /* Frameworks */,
 				C3B2B03B250FEEC40030F563 /* Resources */,
+				1A008C4B34AEA518B9070D6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +186,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A008C4B34AEA518B9070D6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2B99E0653C04406877D1777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RushangLemonPractical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3B2B039250FEEC40030F563 /* Sources */ = {
@@ -310,6 +379,7 @@
 		};
 		C3B2B055250FEEC70030F563 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CA769CE98A951F22ED6903D /* Pods-RushangLemonPractical.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +398,7 @@
 		};
 		C3B2B056250FEEC70030F563 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B86F8BD201365B12210E8B /* Pods-RushangLemonPractical.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
