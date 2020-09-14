@@ -58,6 +58,9 @@
 		C3B2B03F250FEEC40030F563 /* RushangLemonPractical */ = {
 			isa = PBXGroup;
 			children = (
+				C3B2B058250FF2630030F563 /* View */,
+				C3B2B059250FF2630030F563 /* ViewModel */,
+				C3B2B057250FF2630030F563 /* Model */,
 				C3B2B040250FEEC40030F563 /* AppDelegate.swift */,
 				C3B2B042250FEEC40030F563 /* SceneDelegate.swift */,
 				C3B2B044250FEEC40030F563 /* ViewController.swift */,
@@ -68,6 +71,27 @@
 				C3B2B049250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld */,
 			);
 			path = RushangLemonPractical;
+			sourceTree = "<group>";
+		};
+		C3B2B057250FF2630030F563 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3B2B058250FF2630030F563 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3B2B059250FF2630030F563 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rushang.lemonapp.RushangLemonPractical;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rushang.lemonapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,7 +337,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rushang.lemonapp.RushangLemonPractical;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rushang.lemonapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
