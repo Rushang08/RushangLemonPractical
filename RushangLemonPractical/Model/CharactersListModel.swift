@@ -20,7 +20,7 @@ class CharactersListModel : NSObject, NSCoding{
     var birth_year: String
     var eye_gendercolor: String
     var gender: String
-
+    var films : [String]!
 
 
     /**
@@ -34,8 +34,10 @@ class CharactersListModel : NSObject, NSCoding{
         skin_color = dictionary["skin_color"] as? String ?? "NA"
         eye_color = dictionary["eye_color"] as? String ?? "NA"
         gender = dictionary["gender"] as? String ?? "NA"
+        films = dictionary["films"] as? [String]
         birth_year = dictionary["birth_year"] as? String ?? "NA"
         eye_gendercolor = dictionary["eye_gendercolor"] as? String ?? "NA"
+
    }
 
     /**
@@ -51,6 +53,7 @@ class CharactersListModel : NSObject, NSCoding{
             dictionary["gender"] = gender
             dictionary["eye_color"] = eye_color
             dictionary["birth_year"] = birth_year
+            dictionary["films"] = films
             dictionary["eye_gendercolor"] = eye_gendercolor
             return dictionary
     }
@@ -69,6 +72,8 @@ class CharactersListModel : NSObject, NSCoding{
         eye_color = (aDecoder.decodeObject(forKey: "eye_color") as? String)!
         birth_year = (aDecoder.decodeObject(forKey: "birth_year") as? String)!
         eye_gendercolor = (aDecoder.decodeObject(forKey: "eye_gendercolor") as? String)!
+        films = aDecoder.decodeObject(forKey: "films") as? [String]
+
     }
 
     /**
@@ -84,6 +89,8 @@ class CharactersListModel : NSObject, NSCoding{
         aCoder.encode(eye_color, forKey: "eye_color")
         aCoder.encode(birth_year, forKey: "birth_year")
         aCoder.encode(eye_gendercolor, forKey: "eye_gendercolor")
+        aCoder.encode(films, forKey: "films")
+
     }
 }
 

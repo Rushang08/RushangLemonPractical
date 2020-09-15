@@ -46,8 +46,8 @@ extension CharactersListViewController{
             if isSuccess{
                 DispatchQueue.main.async {
                     //Star Wars characters in alphabetical order
-                    self.charactersListVM.charList = self.charactersListVM.charList.sorted(by: { (item1, item2) -> Bool in
-                        return item1.name.compare(item2.name) == ComparisonResult.orderedAscending
+                    self.charactersListVM.charList = self.charactersListVM.charList.sorted(by: { (character1, character2) -> Bool in
+                        return character1.name.compare(character2.name) == ComparisonResult.orderedAscending
                     })
                     self.tblCharList.reloadData()
                 }
@@ -64,6 +64,14 @@ extension CharactersListViewController: UITableViewDelegate,UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.CHARACTERS_TABLE, for: indexPath)
         cell.textLabel!.text = charactersListVM.charList[indexPath.row].name;
         cell.detailTextLabel!.text = charactersListVM.charList[indexPath.row].gender;
+        if indexPath.row == charactersListVM.charList.count - 1 { // last cell
+            if totalCount > charactersListVM.charList.count  { // more items to fetch
+                pageCount = pageCount + 1;
+                self.fetchCharactersWithDetail()
+            }
+            
+        }
+
         return cell
     }
 

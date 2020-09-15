@@ -47,6 +47,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ioG-LG-AT4" kind="show" identifier="Detailview" id="T8j-Hh-SCu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -67,20 +70,26 @@
                     <navigationItem key="navigationItem" title="Star Wars" id="B1O-tU-Zr8"/>
                     <connections>
                         <outlet property="tblCharList" destination="Rzb-Rh-k90" id="d0Y-Tu-Urx"/>
-                        <segue destination="ioG-LG-AT4" kind="push" id="Idt-R9-tIb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="107.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Character Detail View Controller-->
         <scene sceneID="gYg-ix-0Oe">
             <objects>
-                <viewController id="ioG-LG-AT4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterDetailViewController" id="ioG-LG-AT4" customClass="CharacterDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhm-SJ-yHJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yzy-40-yHL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="e1c-Dw-tvo"/>
                     </view>
@@ -88,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5C-G5-UKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="111"/>
+            <point key="canvasLocation" x="1844.9275362318842" y="110.49107142857143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ann-TB-htJ">

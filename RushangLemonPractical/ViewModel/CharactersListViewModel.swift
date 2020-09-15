@@ -12,7 +12,7 @@ class CharactersListViewModel {
     var charList = [CharactersListModel]()
 
     func fetchCharactersListwithDetail(completion: @escaping ( Bool) -> Void) {
-        HTTPManager.shared.get(urlString: KEY.URLS.baseURL + KEY.URLS.people, completionBlock: { [weak self] result in
+        HTTPManager.shared.get(urlString: KEY.URLS.baseURL + KEY.URLS.people + "\(pageCount)", completionBlock: { [weak self] result in
             guard let self = self else {return}
             switch result {
             case .failure(let error):
@@ -21,6 +21,7 @@ class CharactersListViewModel {
                 do
                 {
                     if let json = (try? JSONSerialization.jsonObject(with: resposneData, options: [])) as? Dictionary<String,AnyObject>{
+                        totalCount = json["count"] as! Int
                         if let dataArray = json["results"] as? [[String:Any]]{
                             for dic in dataArray{
                                 let value = CharactersListModel(fromDictionary: dic)

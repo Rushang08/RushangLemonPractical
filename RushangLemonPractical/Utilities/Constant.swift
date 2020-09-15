@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+var pageCount: Int = 1
+var totalCount: Int = 0
 
 struct KEY {
     
@@ -27,7 +29,7 @@ struct KEY {
     }
     struct URLS {
         static let baseURL: String = "https://swapi.dev/api/"//DEV
-        static let people: String = "people/"//DEV
+        static let people: String = "people/?page="//DEV
 
     }
     
