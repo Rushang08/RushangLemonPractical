@@ -11,12 +11,13 @@ import UIKit
 class CharactersListViewController: UIViewController {
 
     var charactersListVM = CharactersListViewModel()
-
+    
     
     @IBOutlet weak var tblCharList: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        charactersListVM.configure()
+        //Retrive data from API.
+        fetchCharactersNameWithDetail()
         // Do any additional setup after loading the view.
     }
     
@@ -36,7 +37,21 @@ class CharactersListViewController: UIViewController {
 
 extension CharactersListViewController{
     
-    
+    func fetchCharactersNameWithDetail() {
+        
+        //ViewModel will send data from API
+        charactersListVM.fetchCharactersListwithDetail{ isSuccess  in
+            //Check success
+            if isSuccess{
+                DispatchQueue.main.async {
+                    self.tblCharList.reloadData()
+                }
+            }
+            
+        }
+
+        
+    }
     
     
 }
@@ -44,11 +59,12 @@ extension CharactersListViewController{
 extension CharactersListViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCharacters", for: indexPath)
-        cell.textLabel!.text = "it works"
+        cell.textLabel!.text = charactersListVM.charList[indexPath.row].name;
+        cell.detailTextLabel!.text = charactersListVM.charList[indexPath.row].gender;
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return charactersListVM.charList.count
     }
 }

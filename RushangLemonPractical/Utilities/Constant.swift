@@ -27,7 +27,9 @@ struct KEY {
     }
     
     struct URLS {
-        static let baseURL: String = "http://34.238.92.161:3000/"//DEV
+        static let baseURL: String = "https://swapi.dev/api/"//DEV
+        static let people: String = "people/"//DEV
+
     }
     
     struct APPNAME {

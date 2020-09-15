@@ -16,6 +16,8 @@
 		C3D69BAC250FFDD90014EF06 /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BAB250FFDD90014EF06 /* CharactersListViewController.swift */; };
 		C3D69BAE250FFEFA0014EF06 /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BAD250FFEFA0014EF06 /* CharactersListViewModel.swift */; };
 		C3D69BB1250FFFF30014EF06 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BB0250FFFF30014EF06 /* Constant.swift */; };
+		C3D69BB3251004FE0014EF06 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BB2251004FE0014EF06 /* HTTPManager.swift */; };
+		C3D69BB5251006030014EF06 /* CharactersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BB4251006030014EF06 /* CharactersListModel.swift */; };
 		FB539E0AC6E983997886A5E6 /* Pods_RushangLemonPractical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		C3D69BAB250FFDD90014EF06 /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewController.swift; sourceTree = "<group>"; };
 		C3D69BAD250FFEFA0014EF06 /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
 		C3D69BB0250FFFF30014EF06 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C3D69BB2251004FE0014EF06 /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		C3D69BB4251006030014EF06 /* CharactersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListModel.swift; sourceTree = "<group>"; };
 		D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RushangLemonPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,7 @@
 		C3B2B057250FF2630030F563 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3D69BB4251006030014EF06 /* CharactersListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				C3D69BB0250FFFF30014EF06 /* Constant.swift */,
+				C3D69BB2251004FE0014EF06 /* HTTPManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D69BB3251004FE0014EF06 /* HTTPManager.swift in Sources */,
+				C3D69BB5251006030014EF06 /* CharactersListModel.swift in Sources */,
 				C3D69BAC250FFDD90014EF06 /* CharactersListViewController.swift in Sources */,
 				C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */,
 				C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */,
