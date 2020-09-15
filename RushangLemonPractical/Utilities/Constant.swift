@@ -22,10 +22,9 @@ struct KEY {
     struct STORYBOARD {
         static let mainStroyBoard  = "Main"
     }
-    struct VIEWCONTROLLER {
-        
+    struct CELL {
+        static let CHARACTERS_TABLE  = "ListCharacters"
     }
-    
     struct URLS {
         static let baseURL: String = "https://swapi.dev/api/"//DEV
         static let people: String = "people/"//DEV

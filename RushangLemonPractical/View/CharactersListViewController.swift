@@ -16,9 +16,10 @@ class CharactersListViewController: UIViewController {
     @IBOutlet weak var tblCharList: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Retrive data from API.
-        fetchCharactersNameWithDetail()
         // Do any additional setup after loading the view.
+        //Retrive data from API.
+        self.fetchCharactersWithDetail()
+
     }
     
 
@@ -37,7 +38,7 @@ class CharactersListViewController: UIViewController {
 
 extension CharactersListViewController{
     
-    func fetchCharactersNameWithDetail() {
+    func fetchCharactersWithDetail() {
         
         //ViewModel will send data from API
         charactersListVM.fetchCharactersListwithDetail{ isSuccess  in
@@ -49,16 +50,14 @@ extension CharactersListViewController{
             }
             
         }
-
         
     }
-    
     
 }
 // MARK: - Tablviewe Datasource & Delegate Method
 extension CharactersListViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCharacters", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.CHARACTERS_TABLE, for: indexPath)
         cell.textLabel!.text = charactersListVM.charList[indexPath.row].name;
         cell.detailTextLabel!.text = charactersListVM.charList[indexPath.row].gender;
         return cell
