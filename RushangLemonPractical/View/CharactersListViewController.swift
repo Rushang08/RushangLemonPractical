@@ -78,4 +78,11 @@ extension CharactersListViewController: UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return charactersListVM.charList.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailVC = (self.storyboard?.instantiateViewController(withIdentifier: "CharacterDetailViewController"))! as! CharacterDetailViewController
+        detailVC.characterDetail = self.charactersListVM.charList[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

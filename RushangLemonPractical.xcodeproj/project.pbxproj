@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C32ABC8925106C810044EE2B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */; };
+		C32ABC8B25109C0F0044EE2B /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32ABC8A25109C0F0044EE2B /* CustomCollectionCell.swift */; };
 		C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B040250FEEC40030F563 /* AppDelegate.swift */; };
 		C3B2B048250FEEC40030F563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B046250FEEC40030F563 /* Main.storyboard */; };
 		C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B049250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 		3CA769CE98A951F22ED6903D /* Pods-RushangLemonPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.debug.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.debug.xcconfig"; sourceTree = "<group>"; };
 		46B86F8BD201365B12210E8B /* Pods-RushangLemonPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.release.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.release.xcconfig"; sourceTree = "<group>"; };
 		C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		C32ABC8A25109C0F0044EE2B /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushangLemonPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B2B040250FEEC40030F563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B2B047250FEEC40030F563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				C3D69BAB250FFDD90014EF06 /* CharactersListViewController.swift */,
 				C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */,
+				C32ABC8A25109C0F0044EE2B /* CustomCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				C32ABC8925106C810044EE2B /* CharacterDetailViewController.swift in Sources */,
 				C3D69BAE250FFEFA0014EF06 /* CharactersListViewModel.swift in Sources */,
 				C3D69BB1250FFFF30014EF06 /* Constant.swift in Sources */,
+				C32ABC8B25109C0F0044EE2B /* CustomCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

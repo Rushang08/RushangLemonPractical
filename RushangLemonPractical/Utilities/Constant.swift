@@ -26,6 +26,8 @@ struct KEY {
     }
     struct CELL {
         static let CHARACTERS_TABLE  = "ListCharacters"
+        static let DETAIL_TABLE  = "filmName"
+        
     }
     struct URLS {
         static let baseURL: String = "https://swapi.dev/api/"//DEV
