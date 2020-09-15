@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B040250FEEC40030F563 /* AppDelegate.swift */; };
-		C3B2B043250FEEC40030F563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B042250FEEC40030F563 /* SceneDelegate.swift */; };
 		C3B2B048250FEEC40030F563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B046250FEEC40030F563 /* Main.storyboard */; };
 		C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B049250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld */; };
 		C3B2B04D250FEEC70030F563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B04C250FEEC70030F563 /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		46B86F8BD201365B12210E8B /* Pods-RushangLemonPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.release.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.release.xcconfig"; sourceTree = "<group>"; };
 		C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushangLemonPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B2B040250FEEC40030F563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3B2B042250FEEC40030F563 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C3B2B047250FEEC40030F563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3B2B04A250FEEC40030F563 /* RushangLemonPractical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RushangLemonPractical.xcdatamodel; sourceTree = "<group>"; };
 		C3B2B04C250FEEC70030F563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				C3B2B057250FF2630030F563 /* Model */,
 				C3D69BAF250FFFB30014EF06 /* Utilities */,
 				C3B2B040250FEEC40030F563 /* AppDelegate.swift */,
-				C3B2B042250FEEC40030F563 /* SceneDelegate.swift */,
 				C3B2B046250FEEC40030F563 /* Main.storyboard */,
 				C3B2B04C250FEEC70030F563 /* Assets.xcassets */,
 				C3B2B04E250FEEC70030F563 /* LaunchScreen.storyboard */,
@@ -258,7 +255,6 @@
 				C3D69BAC250FFDD90014EF06 /* CharactersListViewController.swift in Sources */,
 				C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */,
 				C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */,
-				C3B2B043250FEEC40030F563 /* SceneDelegate.swift in Sources */,
 				C3D69BAE250FFEFA0014EF06 /* CharactersListViewModel.swift in Sources */,
 				C3D69BB1250FFFF30014EF06 /* Constant.swift in Sources */,
 			);

@@ -21,7 +21,6 @@ class CharactersListViewModel {
                 do
                 {
                     if let json = (try? JSONSerialization.jsonObject(with: resposneData, options: [])) as? Dictionary<String,AnyObject>{
-                        
                         if let dataArray = json["results"] as? [[String:Any]]{
                             for dic in dataArray{
                                 let value = CharactersListModel(fromDictionary: dic)
