@@ -45,6 +45,10 @@ extension CharactersListViewController{
             //Check success
             if isSuccess{
                 DispatchQueue.main.async {
+                    //Star Wars characters in alphabetical order
+                    self.charactersListVM.charList = self.charactersListVM.charList.sorted(by: { (item1, item2) -> Bool in
+                        return item1.name.compare(item2.name) == ComparisonResult.orderedAscending
+                    })
                     self.tblCharList.reloadData()
                 }
             }
@@ -54,7 +58,7 @@ extension CharactersListViewController{
     }
     
 }
-// MARK: - Tablviewe Datasource & Delegate Method
+// MARK: - Tablview Datasource & Delegate Method
 extension CharactersListViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.CHARACTERS_TABLE, for: indexPath)
