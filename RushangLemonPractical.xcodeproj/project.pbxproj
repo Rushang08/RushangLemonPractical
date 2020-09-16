@@ -14,6 +14,7 @@
 		C364AB5E25127F6000152BCC /* Stjldbl1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5B25127F5F00152BCC /* Stjldbl1.ttf */; };
 		C364AB5F25127F6000152BCC /* Stjldbl2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5C25127F5F00152BCC /* Stjldbl2.ttf */; };
 		C364AB6025127F6000152BCC /* Strjmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5D25127F5F00152BCC /* Strjmono.ttf */; };
+		C364AB6825129BEC00152BCC /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C364AB6725129BEC00152BCC /* Readme.md */; };
 		C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B040250FEEC40030F563 /* AppDelegate.swift */; };
 		C3B2B048250FEEC40030F563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B046250FEEC40030F563 /* Main.storyboard */; };
 		C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B049250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld */; };
@@ -37,7 +38,8 @@
 		C364AB5B25127F5F00152BCC /* Stjldbl1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl1.ttf; sourceTree = "<group>"; };
 		C364AB5C25127F5F00152BCC /* Stjldbl2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl2.ttf; sourceTree = "<group>"; };
 		C364AB5D25127F5F00152BCC /* Strjmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Strjmono.ttf; sourceTree = "<group>"; };
-		C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushangLemonPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C364AB6725129BEC00152BCC /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		C3B2B03D250FEEC40030F563 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B2B040250FEEC40030F563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B2B047250FEEC40030F563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3B2B04A250FEEC40030F563 /* RushangLemonPractical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RushangLemonPractical.xcdatamodel; sourceTree = "<group>"; };
@@ -81,9 +83,58 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C364AB612512806000152BCC /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				C3D69BAB250FFDD90014EF06 /* CharactersListViewController.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		C364AB622512806C00152BCC /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */,
+			);
+			path = "Detail View";
+			sourceTree = "<group>";
+		};
+		C364AB632512807600152BCC /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				C3D69BAD250FFEFA0014EF06 /* CharactersListViewModel.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		C364AB642512808300152BCC /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C364AB57251253DD00152BCC /* CharacterDetailViewModel.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		C364AB65251280A200152BCC /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				C3D69BB4251006030014EF06 /* CharactersListModel.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		C364AB66251280A900152BCC /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C364AB55251253B500152BCC /* FilmsDetails.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		C3B2B034250FEEC40030F563 = {
 			isa = PBXGroup;
 			children = (
+				C364AB6725129BEC00152BCC /* Readme.md */,
 				C3B2B03F250FEEC40030F563 /* RushangLemonPractical */,
 				C3B2B03E250FEEC40030F563 /* Products */,
 				A7E0E4C73FF4AF34D6DB0DEC /* Pods */,
@@ -94,7 +145,7 @@
 		C3B2B03E250FEEC40030F563 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */,
+				C3B2B03D250FEEC40030F563 /* StarWars.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,8 +170,8 @@
 		C3B2B057250FF2630030F563 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C364AB55251253B500152BCC /* FilmsDetails.swift */,
-				C3D69BB4251006030014EF06 /* CharactersListModel.swift */,
+				C364AB65251280A200152BCC /* ListView */,
+				C364AB66251280A900152BCC /* DetailView */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,8 +179,8 @@
 		C3B2B058250FF2630030F563 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C3D69BAB250FFDD90014EF06 /* CharactersListViewController.swift */,
-				C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */,
+				C364AB622512806C00152BCC /* Detail View */,
+				C364AB612512806000152BCC /* ListView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,8 +188,8 @@
 		C3B2B059250FF2630030F563 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C364AB57251253DD00152BCC /* CharacterDetailViewModel.swift */,
-				C3D69BAD250FFEFA0014EF06 /* CharactersListViewModel.swift */,
+				C364AB632512807600152BCC /* ListView */,
+				C364AB642512808300152BCC /* DetailView */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,7 +226,7 @@
 			);
 			name = RushangLemonPractical;
 			productName = RushangLemonPractical;
-			productReference = C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */;
+			productReference = C3B2B03D250FEEC40030F563 /* StarWars.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,6 +273,7 @@
 				C364AB6025127F6000152BCC /* Strjmono.ttf in Resources */,
 				C3B2B048250FEEC40030F563 /* Main.storyboard in Resources */,
 				C364AB5A25127ED300152BCC /* SerifGothicStd.otf in Resources */,
+				C364AB6825129BEC00152BCC /* Readme.md in Resources */,
 				C364AB5F25127F6000152BCC /* Stjldbl2.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +489,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rushang.lemonapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StarWars;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -456,7 +508,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rushang.lemonapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StarWars;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

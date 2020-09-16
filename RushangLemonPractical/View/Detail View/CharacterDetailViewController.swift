@@ -50,6 +50,14 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.DETAIL_TABLE, for: indexPath)
         cell.textLabel!.text = "\(charactersDetailVM.filmDetail[indexPath.row].title ?? "")"
         cell.detailTextLabel!.text = "Word count of opening_crawl: " + "\(self.getWordCountofopening_crawl(sentence: "\(charactersDetailVM.filmDetail[indexPath.row].openingCrawl ?? "")"))"
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animate(withDuration: 0.3, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
+            },completion: { finished in
+                UIView.animate(withDuration: 0.1, animations: {
+                    cell.layer.transform = CATransform3DMakeScale(1,1,1)
+                })
+        })
         return cell
     }
 
@@ -64,7 +72,7 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
 
 extension CharacterDetailViewController{
     
-    
+    //Setup all basic data with model.
     func setupBasicData(){
         lblGender.text = "Gender: " + self.characterDetail.gender
         lblName.text = "Name: " + self.characterDetail.name
@@ -74,8 +82,10 @@ extension CharacterDetailViewController{
         lblHairColor.text = "Hair Color: " + self.characterDetail.hair_color
         lblSkinColor.text = "Skin Color: " + self.characterDetail.skin_color
         lblMass.text = "Mass: " + self.characterDetail.mass
+        
     }
-    
+
+    //From films model we will get all the films related information with title and opening_crawl.
 
     func getFilmsData() {
         
@@ -90,13 +100,14 @@ extension CharacterDetailViewController{
 
         }
 
+        //Notifiy when we got all the data.
         group.notify(queue: DispatchQueue.main) {
-            print("done")
             self.tblDetail.reloadData()
-
         }
 
     }
+    
+    // Cound the word of opening_crawl.
     
     func getWordCountofopening_crawl(sentence:String) -> Int {
         
@@ -107,6 +118,4 @@ extension CharacterDetailViewController{
         return words.count
         
     }
-
-    
 }
