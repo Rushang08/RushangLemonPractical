@@ -19,31 +19,37 @@ class HTTPManager {
     }
     
     public func get(urlString: String, completionBlock: @escaping (Result<Data, Error>) -> Void) {
-        SVProgressHUD.show()
-        guard let url = URL(string: urlString) else {
-            completionBlock(.failure(HTTPError.invalidURL))
-            SVProgressHUD.dismiss()
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard error == nil else {
-                completionBlock(.failure(error!))
+        if NetworkReachabilityManager()!.isReachable {
+            
+            SVProgressHUD.show()
+            guard let url = URL(string: urlString) else {
+                completionBlock(.failure(HTTPError.invalidURL))
                 SVProgressHUD.dismiss()
                 return
             }
-
-            guard
-                let responseData = data,
-                let httpResponse = response as? HTTPURLResponse,
-                200 ..< 300 ~= httpResponse.statusCode else {
-                    completionBlock(.failure(HTTPError.invalidResponse(data, response)))
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard error == nil else {
+                    completionBlock(.failure(error!))
                     SVProgressHUD.dismiss()
                     return
+                }
+
+                guard
+                    let responseData = data,
+                    let httpResponse = response as? HTTPURLResponse,
+                    200 ..< 300 ~= httpResponse.statusCode else {
+                        completionBlock(.failure(HTTPError.invalidResponse(data, response)))
+                        SVProgressHUD.dismiss()
+                        return
+                }
+                SVProgressHUD.dismiss()
+                completionBlock(.success(responseData))
             }
-            SVProgressHUD.dismiss()
-            completionBlock(.success(responseData))
+            task.resume()
         }
-        task.resume()
+        else{
+            SVProgressHUD.dismiss()
+            showAlertMessage(vc:(appDelegate.window?.rootViewController)!, titleStr:KEY.APPNAME.STAR_WARS, messageStr: KEY.MESSAGE.INTERNET_NOTAVAILABLE)
+        }
     }
 }

@@ -7,9 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Stjldbl1.ttf">
-            <string>StarJediLogoDoubleLine1</string>
-        </array>
         <array key="Strjmono.ttf">
             <string>StarJediLogoMonoLine</string>
         </array>
@@ -18,7 +15,7 @@
         <!--Star Wars-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CharactersListViewController" id="BYZ-38-t0r" customClass="CharactersListViewController" customModule="RushangLemonPractical" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharactersListViewController" id="BYZ-38-t0r" customClass="CharactersListViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +27,10 @@
                                 <view key="tableFooterView" contentMode="scaleToFill" id="UHz-ky-lnu">
                                     <rect key="frame" x="0.0" y="232" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCharacters" textLabel="WfP-nm-R6h" detailTextLabel="YuD-AY-m6C" rowHeight="176" style="IBUITableViewCellStyleSubtitle" id="wKp-WS-aUR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListCharacters" textLabel="WfP-nm-R6h" detailTextLabel="YuD-AY-m6C" rowHeight="176" style="IBUITableViewCellStyleSubtitle" id="wKp-WS-aUR">
                                         <rect key="frame" x="0.0" y="28" width="414" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wKp-WS-aUR" id="dOi-Mw-Npd">
@@ -41,14 +38,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WfP-nm-R6h">
-                                                    <rect key="frame" x="20" y="68" width="47" height="21.5"/>
+                                                    <rect key="frame" x="20" y="64" width="47" height="29.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="StarJediLogoDoubleLine1" family="Star Jedi Logo DoubleLine1" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="StarJediLogoMonoLine" family="Star Jedi Logo MonoLine" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YuD-AY-m6C">
-                                                    <rect key="frame" x="20" y="92.5" width="36.5" height="14"/>
+                                                    <rect key="frame" x="20" y="96.5" width="36.5" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -64,7 +61,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Rzb-Rh-k90" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4ZT-qw-ubi"/>
                             <constraint firstItem="Rzb-Rh-k90" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5b8-Xg-9dD"/>
@@ -85,14 +82,14 @@
         <!--Character Detail View Controller-->
         <scene sceneID="gYg-ix-0Oe">
             <objects>
-                <viewController storyboardIdentifier="CharacterDetailViewController" id="ioG-LG-AT4" customClass="CharacterDetailViewController" customModule="RushangLemonPractical" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterDetailViewController" id="ioG-LG-AT4" customClass="CharacterDetailViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhm-SJ-yHJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wkh-cl-IYK">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" red="0.79999774690000003" green="0.79998511080000001" blue="0.80000078679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="42n-sV-pUm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="422"/>
@@ -102,36 +99,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-UT-Ktp">
-                                                    <rect key="frame" x="0.0" y="6.5" width="151.5" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="15" y="2" width="205.5" height="26"/>
+                                                    <fontDescription key="fontDescription" name="StarJediLogoMonoLine" family="Star Jedi Logo MonoLine" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.79999774690000003" green="0.79998511080000001" blue="0.80000078679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="EoM-je-lfc"/>
                                                 <constraint firstItem="j0I-UT-Ktp" firstAttribute="centerY" secondItem="FkC-DJ-Cic" secondAttribute="centerY" id="GzA-Dz-V6k"/>
-                                                <constraint firstItem="j0I-UT-Ktp" firstAttribute="leading" secondItem="FkC-DJ-Cic" secondAttribute="leading" id="Vla-XP-c1C"/>
+                                                <constraint firstItem="j0I-UT-Ktp" firstAttribute="leading" secondItem="FkC-DJ-Cic" secondAttribute="leading" constant="15" id="dT5-3h-Szl"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejE-60-38D">
                                             <rect key="frame" x="0.0" y="130" width="414" height="30"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physical Attributes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-bj-0o3">
-                                                    <rect key="frame" x="0.0" y="6.5" width="137.5" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="15" y="2" width="180.5" height="26"/>
+                                                    <fontDescription key="fontDescription" name="StarJediLogoMonoLine" family="Star Jedi Logo MonoLine" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.79999774690000003" green="0.79998511080000001" blue="0.80000078679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="7Sy-bj-0o3" firstAttribute="centerY" secondItem="ejE-60-38D" secondAttribute="centerY" id="c3g-FK-vlV"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENs-th-pUb">
-                                            <rect key="frame" x="20" y="38" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="38" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="3XK-JW-CSB"/>
                                             </constraints>
@@ -140,13 +137,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BirthDate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5a-WQ-SbI">
-                                            <rect key="frame" x="20" y="81" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="81" width="369" height="35"/>
                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivy-eP-Y0U">
-                                            <rect key="frame" x="20" y="168" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="168" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="zYp-Ph-mYT"/>
                                             </constraints>
@@ -155,7 +152,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-bE-iVT">
-                                            <rect key="frame" x="20" y="211" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="211" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="Djh-5a-cQx"/>
                                             </constraints>
@@ -164,7 +161,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hair Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETs-8O-eYq">
-                                            <rect key="frame" x="20" y="248.5" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="248.5" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="xJg-lB-tRX"/>
                                             </constraints>
@@ -173,7 +170,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skin Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-w9-Ag6">
-                                            <rect key="frame" x="20" y="291.5" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="291.5" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="WJB-Vq-Xtn"/>
                                             </constraints>
@@ -182,7 +179,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eye Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obP-Sb-n3x">
-                                            <rect key="frame" x="20" y="333.5" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="333.5" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="pc0-TY-Lbq"/>
                                             </constraints>
@@ -191,7 +188,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttG-lX-ZO7">
-                                            <rect key="frame" x="20" y="376.5" width="374" height="35"/>
+                                            <rect key="frame" x="25" y="376.5" width="369" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="Ama-BE-qkJ"/>
                                             </constraints>
@@ -202,7 +199,7 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
-                                        <constraint firstItem="ENs-th-pUb" firstAttribute="leading" secondItem="42n-sV-pUm" secondAttribute="leading" constant="20" id="0th-WD-41s"/>
+                                        <constraint firstItem="ENs-th-pUb" firstAttribute="leading" secondItem="42n-sV-pUm" secondAttribute="leading" constant="25" id="0th-WD-41s"/>
                                         <constraint firstItem="ivy-eP-Y0U" firstAttribute="top" secondItem="ejE-60-38D" secondAttribute="bottom" constant="8" id="12a-eP-eAd"/>
                                         <constraint firstItem="ZLa-w9-Ag6" firstAttribute="leading" secondItem="ETs-8O-eYq" secondAttribute="leading" id="2q7-QY-fwD"/>
                                         <constraint firstItem="N5a-WQ-SbI" firstAttribute="top" secondItem="ENs-th-pUb" secondAttribute="bottom" constant="8" id="7FQ-kr-MRe"/>
@@ -220,6 +217,7 @@
                                         <constraint firstItem="ttG-lX-ZO7" firstAttribute="trailing" secondItem="obP-Sb-n3x" secondAttribute="trailing" id="TLb-gg-7p7"/>
                                         <constraint firstItem="obP-Sb-n3x" firstAttribute="trailing" secondItem="ZLa-w9-Ag6" secondAttribute="trailing" id="VLQ-FG-fdL"/>
                                         <constraint firstItem="ENs-th-pUb" firstAttribute="top" secondItem="FkC-DJ-Cic" secondAttribute="bottom" constant="8" id="YXw-Vk-6hf"/>
+                                        <constraint firstItem="7Sy-bj-0o3" firstAttribute="leading" secondItem="j0I-UT-Ktp" secondAttribute="leading" id="aMq-iI-wHP"/>
                                         <constraint firstItem="E1a-bE-iVT" firstAttribute="trailing" secondItem="ivy-eP-Y0U" secondAttribute="trailing" id="bNt-uV-nVG"/>
                                         <constraint firstItem="ZLa-w9-Ag6" firstAttribute="top" secondItem="ETs-8O-eYq" secondAttribute="bottom" constant="8" id="cNn-hq-N3H"/>
                                         <constraint firstItem="ejE-60-38D" firstAttribute="top" secondItem="N5a-WQ-SbI" secondAttribute="bottom" constant="14" id="ePp-sV-N6h"/>
@@ -233,7 +231,6 @@
                                         <constraint firstItem="ETs-8O-eYq" firstAttribute="top" secondItem="E1a-bE-iVT" secondAttribute="bottom" constant="2.5" id="s9Y-Oz-azn"/>
                                         <constraint firstItem="ETs-8O-eYq" firstAttribute="leading" secondItem="E1a-bE-iVT" secondAttribute="leading" id="vZi-9M-Ejt"/>
                                         <constraint firstItem="ivy-eP-Y0U" firstAttribute="height" secondItem="N5a-WQ-SbI" secondAttribute="height" id="vhR-We-RIX"/>
-                                        <constraint firstItem="7Sy-bj-0o3" firstAttribute="leading" secondItem="j0I-UT-Ktp" secondAttribute="leading" id="xUD-E4-PG7"/>
                                         <constraint firstItem="ivy-eP-Y0U" firstAttribute="trailing" secondItem="N5a-WQ-SbI" secondAttribute="trailing" id="yrB-lI-Yva"/>
                                         <constraint firstItem="N5a-WQ-SbI" firstAttribute="height" secondItem="ENs-th-pUb" secondAttribute="height" id="zye-UK-OhI"/>
                                     </constraints>
@@ -241,10 +238,10 @@
                                 <view key="tableFooterView" contentMode="scaleToFill" id="r3E-pQ-jSo">
                                     <rect key="frame" x="0.0" y="637" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filmName" textLabel="rgQ-v8-NeM" detailTextLabel="2W3-xL-UAf" rowHeight="159" style="IBUITableViewCellStyleSubtitle" id="0BI-Ds-xfH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="filmName" textLabel="rgQ-v8-NeM" detailTextLabel="2W3-xL-UAf" rowHeight="159" style="IBUITableViewCellStyleSubtitle" id="0BI-Ds-xfH">
                                         <rect key="frame" x="0.0" y="450" width="414" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0BI-Ds-xfH" id="Bru-iX-EdJ">

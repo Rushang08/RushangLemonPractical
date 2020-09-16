@@ -50,6 +50,7 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.DETAIL_TABLE, for: indexPath)
         cell.textLabel!.text = "\(charactersDetailVM.filmDetail[indexPath.row].title ?? "")"
         cell.detailTextLabel!.text = "Word count of opening_crawl: " + "\(self.getWordCountofopening_crawl(sentence: "\(charactersDetailVM.filmDetail[indexPath.row].openingCrawl ?? "")"))"
+        cell.imageView?.image = UIImage.init(named: KEY.APP_GENERAL.MOVIE_PLACEHOLDER_IMAGENAME)
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
         UIView.animate(withDuration: 0.3, animations: {
             cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
@@ -64,8 +65,16 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return charactersDetailVM.filmDetail.count
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Films"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        view.backgroundColor = .black
+        let label = UILabel(frame: CGRect(x: 15, y: 5, width: tableView.frame.width, height: 20))
+        label.textColor = .white
+        label.font = UIFont(name:KEY.FONT.STAR_LOGO_FONT, size: 15)
+        label.text = KEY.APP_GENERAL.SECTION_FILM_TITLE
+        label.textAlignment = .left
+        view.addSubview(label)
+        return view
     }
 
 }
@@ -82,7 +91,9 @@ extension CharacterDetailViewController{
         lblHairColor.text = "Hair Color: " + self.characterDetail.hair_color
         lblSkinColor.text = "Skin Color: " + self.characterDetail.skin_color
         lblMass.text = "Mass: " + self.characterDetail.mass
-        
+        self.title = self.characterDetail.name
+
+
     }
 
     //From films model we will get all the films related information with title and opening_crawl.

@@ -15,27 +15,24 @@ class CharactersListViewModel {
         HTTPManager.shared.get(urlString: KEY.URLS.baseURL + KEY.URLS.people + "\(pageCount)", completionBlock: { [weak self] result in
             guard let self = self else {return}
             switch result {
-            case .failure(let error):
+            case .failure( _):
                 completion(false)
             case .success(let resposneData) :
-                do
-                {
-                    if let json = (try? JSONSerialization.jsonObject(with: resposneData, options: [])) as? Dictionary<String,AnyObject>{
-                        totalCount = json["count"] as! Int
-                        if let dataArray = json["results"] as? [[String:Any]]{
-                            for dic in dataArray{
-                                let value = CharactersListModel(fromDictionary: dic)
+                if let json = (try? JSONSerialization.jsonObject(with: resposneData, options: [])) as? Dictionary<String,AnyObject>{
+                    totalCount = json["count"] as! Int
+                    if let dataArray = json["results"] as? [[String:Any]]{
+                        for dic in dataArray{
+                            let value = CharactersListModel(fromDictionary: dic)
+                            let filteredItems = self.charList.filter { $0.name == value.name }
+                            if filteredItems.count == 0{
                                 self.charList.append(value)
                             }
-                            completion( true)
+
                         }
+                        completion( true)
                     }
-                } catch {
-                    // deal with error from JSON decoding if used in production
                 }
             }
         })
     }
-
-
 }
