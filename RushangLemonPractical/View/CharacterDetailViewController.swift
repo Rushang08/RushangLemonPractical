@@ -20,13 +20,19 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var lblEyeColor: UILabel!
     @IBOutlet weak var lblGender: UILabel!
     var characterDetail : CharactersListModel!
+    var charactersDetailVM = CharacterDetailViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBasicData()
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tblDetail.rowHeight = 85
+        setupBasicData()
+        getFilmsData()
 
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -42,28 +48,65 @@ class CharacterDetailViewController: UIViewController {
 extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.DETAIL_TABLE, for: indexPath)
-        cell.textLabel!.text = "\(indexPath.row)"
+        cell.textLabel!.text = "\(charactersDetailVM.filmDetail[indexPath.row].title ?? "")"
+        cell.detailTextLabel!.text = "Word count of opening_crawl: " + "\(self.getWordCountofopening_crawl(sentence: "\(charactersDetailVM.filmDetail[indexPath.row].openingCrawl ?? "")"))"
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characterDetail.films.count
+        return charactersDetailVM.filmDetail.count
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Films"
+    }
+
 }
 
 extension CharacterDetailViewController{
     
     
     func setupBasicData(){
-        lblGender.text = self.characterDetail.gender
-        lblName.text = self.characterDetail.name
-        lblBDate.text = self.characterDetail.birth_year
-        lblHeight.text = self.characterDetail.height
-        lblEyeColor.text = self.characterDetail.eye_color
-        lblHairColor.text = self.characterDetail.hair_color
-        lblSkinColor.text = self.characterDetail.skin_color
-        lblMass.text = self.characterDetail.mass
-        tblDetail.reloadData()
+        lblGender.text = "Gender: " + self.characterDetail.gender
+        lblName.text = "Name: " + self.characterDetail.name
+        lblBDate.text = "BirthDate: " + self.characterDetail.birth_year
+        lblHeight.text = "Height: " + self.characterDetail.height
+        lblEyeColor.text = "Eye Color: " + self.characterDetail.eye_color
+        lblHairColor.text = "Hair Color: " + self.characterDetail.hair_color
+        lblSkinColor.text = "Skin Color: " + self.characterDetail.skin_color
+        lblMass.text = "Mass: " + self.characterDetail.mass
     }
+    
+
+    func getFilmsData() {
+        
+        let group = DispatchGroup()
+
+        for obj in self.characterDetail.films{
+            group.enter()
+            
+            charactersDetailVM.featchFilmsDetails(url: obj) { (isSuccess) in
+                group.leave()
+            }
+
+        }
+
+        group.notify(queue: DispatchQueue.main) {
+            print("done")
+            self.tblDetail.reloadData()
+
+        }
+
+    }
+    
+    func getWordCountofopening_crawl(sentence:String) -> Int {
+        
+        var words: [Substring] = []
+        sentence.enumerateSubstrings(in: sentence.startIndex..., options: .byWords) { _, range, _, _ in
+            words.append(sentence[range])
+        }
+        return words.count
+        
+    }
+
     
 }

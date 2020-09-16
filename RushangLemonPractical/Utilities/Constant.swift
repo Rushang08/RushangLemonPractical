@@ -17,8 +17,8 @@ struct KEY {
         
     }
     
-    struct EventLogImage {
-        
+    struct VIEWCONTROLLERS {
+        static let DETAILVIEW  = "CharacterDetailViewController"
     }
     
     struct STORYBOARD {
@@ -30,8 +30,8 @@ struct KEY {
         
     }
     struct URLS {
-        static let baseURL: String = "https://swapi.dev/api/"//DEV
-        static let people: String = "people/?page="//DEV
+        static let baseURL: String = "https://swapi.dev/api/"
+        static let people: String = "people/?page="
 
     }
     
@@ -39,5 +39,5 @@ struct KEY {
         static let AEDLink = "AEDLink"
     }
     
-    
 }
+

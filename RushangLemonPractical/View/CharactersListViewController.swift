@@ -16,6 +16,7 @@ class CharactersListViewController: UIViewController {
     @IBOutlet weak var tblCharList: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tblCharList.rowHeight = 176.0
         // Do any additional setup after loading the view.
         //Retrive data from API.
         self.fetchCharactersWithDetail()
@@ -81,7 +82,7 @@ extension CharactersListViewController: UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let detailVC = (self.storyboard?.instantiateViewController(withIdentifier: "CharacterDetailViewController"))! as! CharacterDetailViewController
+        let detailVC = (self.storyboard?.instantiateViewController(withIdentifier: KEY.VIEWCONTROLLERS.DETAILVIEW))! as! CharacterDetailViewController
         detailVC.characterDetail = self.charactersListVM.charList[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }

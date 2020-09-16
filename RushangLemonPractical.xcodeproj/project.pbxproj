@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C32ABC8925106C810044EE2B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */; };
-		C32ABC8B25109C0F0044EE2B /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32ABC8A25109C0F0044EE2B /* CustomCollectionCell.swift */; };
+		C364AB56251253B500152BCC /* FilmsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C364AB55251253B500152BCC /* FilmsDetails.swift */; };
+		C364AB58251253DD00152BCC /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C364AB57251253DD00152BCC /* CharacterDetailViewModel.swift */; };
+		C364AB5A25127ED300152BCC /* SerifGothicStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5925127ED300152BCC /* SerifGothicStd.otf */; };
+		C364AB5E25127F6000152BCC /* Stjldbl1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5B25127F5F00152BCC /* Stjldbl1.ttf */; };
+		C364AB5F25127F6000152BCC /* Stjldbl2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5C25127F5F00152BCC /* Stjldbl2.ttf */; };
+		C364AB6025127F6000152BCC /* Strjmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364AB5D25127F5F00152BCC /* Strjmono.ttf */; };
 		C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B040250FEEC40030F563 /* AppDelegate.swift */; };
 		C3B2B048250FEEC40030F563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B2B046250FEEC40030F563 /* Main.storyboard */; };
 		C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3B2B049250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld */; };
@@ -26,7 +31,12 @@
 		3CA769CE98A951F22ED6903D /* Pods-RushangLemonPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.debug.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.debug.xcconfig"; sourceTree = "<group>"; };
 		46B86F8BD201365B12210E8B /* Pods-RushangLemonPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushangLemonPractical.release.xcconfig"; path = "Target Support Files/Pods-RushangLemonPractical/Pods-RushangLemonPractical.release.xcconfig"; sourceTree = "<group>"; };
 		C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
-		C32ABC8A25109C0F0044EE2B /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
+		C364AB55251253B500152BCC /* FilmsDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsDetails.swift; sourceTree = "<group>"; };
+		C364AB57251253DD00152BCC /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		C364AB5925127ED300152BCC /* SerifGothicStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SerifGothicStd.otf; sourceTree = "<group>"; };
+		C364AB5B25127F5F00152BCC /* Stjldbl1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl1.ttf; sourceTree = "<group>"; };
+		C364AB5C25127F5F00152BCC /* Stjldbl2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl2.ttf; sourceTree = "<group>"; };
+		C364AB5D25127F5F00152BCC /* Strjmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Strjmono.ttf; sourceTree = "<group>"; };
 		C3B2B03D250FEEC40030F563 /* RushangLemonPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushangLemonPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B2B040250FEEC40030F563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B2B047250FEEC40030F563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 		C3B2B057250FF2630030F563 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C364AB55251253B500152BCC /* FilmsDetails.swift */,
 				C3D69BB4251006030014EF06 /* CharactersListModel.swift */,
 			);
 			path = Model;
@@ -119,7 +130,6 @@
 			children = (
 				C3D69BAB250FFDD90014EF06 /* CharactersListViewController.swift */,
 				C32ABC8825106C810044EE2B /* CharacterDetailViewController.swift */,
-				C32ABC8A25109C0F0044EE2B /* CustomCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 		C3B2B059250FF2630030F563 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C364AB57251253DD00152BCC /* CharacterDetailViewModel.swift */,
 				C3D69BAD250FFEFA0014EF06 /* CharactersListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -135,6 +146,10 @@
 		C3D69BAF250FFFB30014EF06 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C364AB5B25127F5F00152BCC /* Stjldbl1.ttf */,
+				C364AB5C25127F5F00152BCC /* Stjldbl2.ttf */,
+				C364AB5D25127F5F00152BCC /* Strjmono.ttf */,
+				C364AB5925127ED300152BCC /* SerifGothicStd.otf */,
 				C3D69BB0250FFFF30014EF06 /* Constant.swift */,
 				C3D69BB2251004FE0014EF06 /* HTTPManager.swift */,
 			);
@@ -201,9 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C364AB5E25127F6000152BCC /* Stjldbl1.ttf in Resources */,
 				C3B2B050250FEEC70030F563 /* LaunchScreen.storyboard in Resources */,
 				C3B2B04D250FEEC70030F563 /* Assets.xcassets in Resources */,
+				C364AB6025127F6000152BCC /* Strjmono.ttf in Resources */,
 				C3B2B048250FEEC40030F563 /* Main.storyboard in Resources */,
+				C364AB5A25127ED300152BCC /* SerifGothicStd.otf in Resources */,
+				C364AB5F25127F6000152BCC /* Stjldbl2.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +281,10 @@
 				C3B2B04B250FEEC40030F563 /* RushangLemonPractical.xcdatamodeld in Sources */,
 				C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */,
 				C32ABC8925106C810044EE2B /* CharacterDetailViewController.swift in Sources */,
+				C364AB56251253B500152BCC /* FilmsDetails.swift in Sources */,
+				C364AB58251253DD00152BCC /* CharacterDetailViewModel.swift in Sources */,
 				C3D69BAE250FFEFA0014EF06 /* CharactersListViewModel.swift in Sources */,
 				C3D69BB1250FFFF30014EF06 /* Constant.swift in Sources */,
-				C32ABC8B25109C0F0044EE2B /* CustomCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
