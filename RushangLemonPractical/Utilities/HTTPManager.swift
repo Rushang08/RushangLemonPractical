@@ -6,7 +6,6 @@
 
 
 import Foundation
-import Alamofire
 import SVProgressHUD
 
 class HTTPManager {
@@ -18,7 +17,7 @@ class HTTPManager {
     }
     
     public func get(urlString: String, completionBlock: @escaping (Result<Data, Error>) -> Void) {
-        if NetworkReachabilityManager()!.isReachable {
+        if Reachability.isConnectedToNetwork() {
             
             SVProgressHUD.show()
             guard let url = URL(string: urlString) else {

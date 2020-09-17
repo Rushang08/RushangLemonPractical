@@ -25,6 +25,7 @@
 		C3D69BB1250FFFF30014EF06 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BB0250FFFF30014EF06 /* Constant.swift */; };
 		C3D69BB3251004FE0014EF06 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BB2251004FE0014EF06 /* HTTPManager.swift */; };
 		C3D69BB5251006030014EF06 /* CharactersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D69BB4251006030014EF06 /* CharactersListModel.swift */; };
+		C3F41F582513497900D3C132 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F41F572513497900D3C132 /* Reachability.swift */; };
 		FB539E0AC6E983997886A5E6 /* Pods_RushangLemonPractical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		C3D69BB0250FFFF30014EF06 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C3D69BB2251004FE0014EF06 /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
 		C3D69BB4251006030014EF06 /* CharactersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListModel.swift; sourceTree = "<group>"; };
+		C3F41F572513497900D3C132 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D4D70F3D11D0E449DDEF96F9 /* Pods_RushangLemonPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RushangLemonPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,6 +205,7 @@
 				C364AB5925127ED300152BCC /* SerifGothicStd.otf */,
 				C3D69BB0250FFFF30014EF06 /* Constant.swift */,
 				C3D69BB2251004FE0014EF06 /* HTTPManager.swift */,
+				C3F41F572513497900D3C132 /* Reachability.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				C3B2B041250FEEC40030F563 /* AppDelegate.swift in Sources */,
 				C32ABC8925106C810044EE2B /* CharacterDetailViewController.swift in Sources */,
 				C364AB56251253B500152BCC /* FilmsDetails.swift in Sources */,
+				C3F41F582513497900D3C132 /* Reachability.swift in Sources */,
 				C364AB58251253DD00152BCC /* CharacterDetailViewModel.swift in Sources */,
 				C3D69BAE250FFEFA0014EF06 /* CharactersListViewModel.swift in Sources */,
 				C3D69BB1250FFFF30014EF06 /* Constant.swift in Sources */,
