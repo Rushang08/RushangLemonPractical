@@ -23,11 +23,11 @@ class CharactersListViewModel {
                     if let dataArray = json["results"] as? [[String:Any]]{
                         for dic in dataArray{
                             let value = CharactersListModel(fromDictionary: dic)
-                            let filteredItems = self.charList.filter { $0.name == value.name }
-                            if filteredItems.count == 0{
-                                self.charList.append(value)
-                            }
+                            self.charList.append(value)
 
+//                            let filteredItems = self.charList.filter { $0.name == value.name }
+//                            if filteredItems.count == 0{
+//                            }
                         }
                         completion( true)
                     }

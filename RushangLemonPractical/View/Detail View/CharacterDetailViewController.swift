@@ -49,7 +49,7 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.DETAIL_TABLE, for: indexPath)
         cell.textLabel!.text = "\(charactersDetailVM.filmDetail[indexPath.row].title ?? "")"
-        cell.detailTextLabel!.text = "Word count of opening_crawl: " + "\(self.getWordCountofopening_crawl(sentence: "\(charactersDetailVM.filmDetail[indexPath.row].openingCrawl ?? "")"))"
+        cell.detailTextLabel!.text = "Word count of opening crawl: " + "\(self.getWordCountofopeningCrawl(sentence: "\(charactersDetailVM.filmDetail[indexPath.row].openingCrawl ?? "")"))"
         cell.imageView?.image = UIImage.init(named: KEY.APP_GENERAL.MOVIE_PLACEHOLDER_IMAGENAME)
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
         UIView.animate(withDuration: 0.3, animations: {
@@ -115,7 +115,7 @@ extension CharacterDetailViewController{
     }
     
     // Cound the word of opening_crawl.
-    func getWordCountofopening_crawl(sentence:String) -> Int {
+    func getWordCountofopeningCrawl(sentence:String) -> Int {
         
         var words: [Substring] = []
         sentence.enumerateSubstrings(in: sentence.startIndex..., options: .byWords) { _, range, _, _ in

@@ -29,6 +29,8 @@ class CharactersListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: KEY.FONT.STAR_LOGO_FONT, size: 15)!]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+
     }
     
     
@@ -67,6 +69,8 @@ extension CharactersListViewController{
     
     @objc func refresh(_ sender: AnyObject) {
         // Code to refresh table view
+        charactersListVM.charList.removeAll()
+        pageCount = 1
         self.fetchCharactersWithDetail()
         refreshControl.endRefreshing()
         
@@ -78,28 +82,27 @@ extension CharactersListViewController{
 extension CharactersListViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: KEY.CELL.CHARACTERS_TABLE, for: indexPath)
-        cell.textLabel!.text = charactersListVM.charList[indexPath.row].name;
-        cell.detailTextLabel!.text = charactersListVM.charList[indexPath.row].gender;
-        cell.imageView!.image = UIImage.init(named: KEY.APP_GENERAL.APP_LOGO_IMAGENAME)
-        //CELL ANIMATION PART
-        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-        UIView.animate(withDuration: 0.5, animations: {
-            cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
-        },completion: { finished in
-            UIView.animate(withDuration: 0.1, animations: {
-                cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        if self.charactersListVM.charList.count > 0 {
+            cell.textLabel!.text = charactersListVM.charList[indexPath.row].name;
+            cell.detailTextLabel!.text = charactersListVM.charList[indexPath.row].gender;
+            cell.imageView!.image = UIImage.init(named: KEY.APP_GENERAL.APP_LOGO_IMAGENAME)
+            //CELL ANIMATION PART
+            cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+            UIView.animate(withDuration: 0.5, animations: {
+                cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
+            },completion: { finished in
+                UIView.animate(withDuration: 0.1, animations: {
+                    cell.layer.transform = CATransform3DMakeScale(1,1,1)
+                })
             })
-        })
-        
-        //PAGINATION
-        if indexPath.row == charactersListVM.charList.count - 1 { // last cell
-            if totalCount > charactersListVM.charList.count  { // more items to fetch
-                pageCount = pageCount + 1;
-                self.fetchCharactersWithDetail()
+            //PAGINATION
+            if indexPath.row == charactersListVM.charList.count - 1 { // last cell
+                if totalCount > charactersListVM.charList.count  { // more items to fetch
+                    pageCount = pageCount + 1;
+                    self.fetchCharactersWithDetail()
+                }
             }
-            
         }
-        
         return cell
     }
     
