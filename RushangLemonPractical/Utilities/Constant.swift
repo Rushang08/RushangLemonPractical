@@ -23,6 +23,9 @@ struct KEY {
         static let SECTION_FILM_TITLE  = "Films"
         static let APP_LOGO_IMAGENAME  = "AppLogo"
         static let MOVIE_PLACEHOLDER_IMAGENAME  = "Movie"
+        static let PULL_TO_REFRESH  = "Pull to refresh"
+
+        //
     }
     
     struct VIEWCONTROLLERS {

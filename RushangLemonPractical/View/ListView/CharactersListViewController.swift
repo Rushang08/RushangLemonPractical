@@ -20,7 +20,7 @@ class CharactersListViewController: UIViewController {
         tblCharList.rowHeight = 130.0
         // Do any additional setup after loading the view.
         //Retrive data from API.
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: KEY.APP_GENERAL.PULL_TO_REFRESH)
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         self.tblCharList.addSubview(refreshControl) // not required when using UITableViewController
         self.fetchCharactersWithDetail()
