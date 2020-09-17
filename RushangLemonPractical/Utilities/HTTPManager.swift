@@ -1,10 +1,9 @@
+//  HTTPManager.swift
+//  RushangLemonPractical
 //
-//  LoginHTTPManager.swift
-//  NCP
-//
-//  Created by Sanket Shah on 3/2/20.
-//  Copyright © 2020 Sanket Shah. All rights reserved.
-//
+//  Created by Rushang Prajapati on 15/09/20.
+//  Copyright © 2020 Rushang. All rights reserved.
+
 
 import Foundation
 import Alamofire
@@ -24,12 +23,14 @@ class HTTPManager {
             SVProgressHUD.show()
             guard let url = URL(string: urlString) else {
                 completionBlock(.failure(HTTPError.invalidURL))
+                showAlertMessage(vc:(appDelegate.window?.rootViewController)!, titleStr:KEY.APPNAME.STAR_WARS, messageStr: KEY.MESSAGE.URL_INVALID)
                 SVProgressHUD.dismiss()
                 return
             }
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard error == nil else {
                     completionBlock(.failure(error!))
+                    showAlertMessage(vc:(appDelegate.window?.rootViewController)!, titleStr:KEY.APPNAME.STAR_WARS, messageStr: KEY.MESSAGE.SOMETHING_WENT_WRONG)
                     SVProgressHUD.dismiss()
                     return
                 }

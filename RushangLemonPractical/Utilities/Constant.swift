@@ -31,6 +31,10 @@ struct KEY {
     
     struct MESSAGE {
         static let INTERNET_NOTAVAILABLE  = "The Internet connection appears to be offline."
+        static let SOMETHING_WENT_WRONG  = "Something went wrong. Please try again later."
+        static let URL_INVALID  = "Request is not good. Please contact to appliation support."
+
+
     }
 
     struct STORYBOARD {

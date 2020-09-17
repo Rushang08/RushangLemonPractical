@@ -9,7 +9,7 @@
 import UIKit
 
 class CharacterDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var tblDetail: UITableView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblBDate: UILabel!
@@ -21,7 +21,7 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var lblGender: UILabel!
     var characterDetail : CharactersListModel!
     var charactersDetailVM = CharacterDetailViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,19 +30,19 @@ class CharacterDetailViewController: UIViewController {
         self.tblDetail.rowHeight = 85
         setupBasicData()
         getFilmsData()
-
+        
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-//filmName
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    //filmName
 }
 // MARK: - Tablview Datasource & Delegate Method
 extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSource {
@@ -54,14 +54,14 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
         UIView.animate(withDuration: 0.3, animations: {
             cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
-            },completion: { finished in
-                UIView.animate(withDuration: 0.1, animations: {
-                    cell.layer.transform = CATransform3DMakeScale(1,1,1)
-                })
+        },completion: { finished in
+            UIView.animate(withDuration: 0.1, animations: {
+                cell.layer.transform = CATransform3DMakeScale(1,1,1)
+            })
         })
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return charactersDetailVM.filmDetail.count
     }
@@ -76,7 +76,7 @@ extension CharacterDetailViewController: UITableViewDelegate,UITableViewDataSour
         view.addSubview(label)
         return view
     }
-
+    
 }
 
 extension CharacterDetailViewController{
@@ -92,34 +92,29 @@ extension CharacterDetailViewController{
         lblSkinColor.text = "Skin Color: " + self.characterDetail.skin_color
         lblMass.text = "Mass: " + self.characterDetail.mass
         self.title = self.characterDetail.name
-
-
+        
     }
-
+    
     //From films model we will get all the films related information with title and opening_crawl.
-
+    
     func getFilmsData() {
         
         let group = DispatchGroup()
-
+        
         for obj in self.characterDetail.films{
             group.enter()
-            
             charactersDetailVM.featchFilmsDetails(url: obj) { (isSuccess) in
                 group.leave()
             }
-
         }
-
         //Notifiy when we got all the data.
         group.notify(queue: DispatchQueue.main) {
             self.tblDetail.reloadData()
         }
-
+        
     }
     
     // Cound the word of opening_crawl.
-    
     func getWordCountofopening_crawl(sentence:String) -> Int {
         
         var words: [Substring] = []
